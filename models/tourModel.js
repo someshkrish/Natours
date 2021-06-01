@@ -165,10 +165,10 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
-  console.log(`Query Middleware took ${Date.now() - this.start} ms...`);
-  next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+//   console.log(`Query Middleware took ${Date.now() - this.start} ms...`);
+//   next();
+// });
 
 // we are commenting this out bcoz the $geoNear has to be the first stage to work
 // we will figure out a way later

@@ -91,8 +91,8 @@ reviewSchema.post('save', function () {
 //first we use post query middleware hook and before executing the query we are storing that particular review to the query object.
 reviewSchema.pre(/^findOneAnd/, async function (next) {
   this.review = await this.findOne();
-  console.log(this.review);
-  console.log(this);
+  // console.log(this.review);
+  // console.log(this);
   next();
 });
 
